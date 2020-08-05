@@ -24,7 +24,7 @@ $ docker-compose ps
 $ docker exec -it postgres psql -U postgres
 ```
 
-### Technology used
+### Technologies used
 - [Gradle](https://github.com/gradle/gradle)
 - [Kotlin](https://github.com/JetBrains/kotlin)
 - [GraphQL Kotlin by Expedia](https://github.com/ExpediaGroup/graphql-kotlin)
