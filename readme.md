@@ -21,7 +21,7 @@ $ docker-compose ps
 ```
 5. Access PostgreSQL to make changes according to your needs
 ```
-$ docker exec -it postgres psql -U postgres
+$ docker exec -it database psql -U postgres
 ```
 
 ### Technologies used
