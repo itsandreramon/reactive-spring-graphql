@@ -4,6 +4,6 @@ import com.expediagroup.graphql.spring.operations.Query
 import org.springframework.stereotype.Component
 
 @Component
-class HelloQuery : Query {
-  fun hello() = "Hello"
+class DefaultQuery : Query {
+  fun default() = "Running..."
 }
