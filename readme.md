@@ -24,6 +24,16 @@ $ docker-compose ps
 $ docker exec -it database psql -U postgres
 ```
 
+### Example GraphQL query
+```
+subscription {
+    allBooks {
+        name
+        pageCount
+    }
+}
+```
+
 ### Technologies used
 - [Gradle](https://github.com/gradle/gradle)
 - [Kotlin](https://github.com/JetBrains/kotlin)
