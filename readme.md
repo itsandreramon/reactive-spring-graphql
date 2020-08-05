@@ -1,7 +1,7 @@
 # Reactive Spring GraphQL
 An example project showcasing a simple service which serves data about famous books.
 
-#### How to run the sample
+### How to run the sample
 1. Build a container image using Spring Boot's Buildpack support
 ```
 $ ./gradlew bootBuildImage --imageName=demo/spring-graphql
@@ -23,9 +23,8 @@ $ docker-compose ps
 ```
 $ docker exec -it postgres psql -U postgres
 ```
-6. Update the source code to your needs and iterate
 
-#### Technology used
+### Technology used
 - [Gradle](https://github.com/gradle/gradle)
 - [Kotlin](https://github.com/JetBrains/kotlin)
 - [GraphQL Kotlin by Expedia](https://github.com/ExpediaGroup/graphql-kotlin)
