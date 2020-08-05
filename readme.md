@@ -1,0 +1,9 @@
+# Reactive Spring GraphQL
+An example project showcasing a simple service which serves data about famous books.
+
+#### Technology used
+- [Kotlin](https://kotlinlang.org/)
+- [GraphQL-Kotlin](https://github.com/ExpediaGroup/graphql-kotlin)
+- [Spring WebFlux](https://spring.io/reactive)
+- [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc)
+- [PostgreSQL](https://www.postgresql.org/)
