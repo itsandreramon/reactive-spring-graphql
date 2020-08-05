@@ -24,11 +24,12 @@ dependencies {
   // Kotlin
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
   // Reactor
-  implementation("io.projectreactor:reactor-tools")
+  // implementation("io.projectreactor:reactor-tools")
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 
   // Postgres

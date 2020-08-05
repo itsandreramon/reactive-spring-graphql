@@ -1,0 +1,15 @@
+version: '3'
+services:
+  database:
+    image: "postgres:12.3"
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password
+
+  spring:
+    image: "demo:0.0.1-SNAPSHOT"
+    depends_on:
+      - database
+    ports:
+      - 8080:8080
