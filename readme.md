@@ -19,13 +19,9 @@ $ docker-compose up
 ```
 $ docker-compose ps
 ```
-5. Access PostgreSQL to make changes according to your needs
+5. Access PostgreSQL to make changes according to your needs (e.g. via CLI)
 ```
 $ docker exec -it database psql -U postgres
-```
-6. After updating your Spring application, delete your old image and iterate
-```
-$ docker image rm demo/spring-graphql
 ```
 
 ### Example GraphQL query
