@@ -1,6 +1,8 @@
 version: '3'
 services:
   database:
+    # you can also use the official PostgreSQL image
+    # and use the provided schema to populate the database
     image: "itsandreramon/postgres:12.3"
     container_name: database
     ports:
