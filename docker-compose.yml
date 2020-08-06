@@ -1,7 +1,7 @@
 version: '3'
 services:
   database:
-    image: "postgres:12.3"
+    image: "itsandreramon/postgres:12.3"
     container_name: database
     ports:
       - 5432:5432
@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: password
 
   spring:
-    image: "demo/spring-graphql"
+    image: "itsandreramon/spring:latest"
     container_name: spring
     depends_on:
       - database
