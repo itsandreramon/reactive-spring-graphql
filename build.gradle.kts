@@ -1,18 +1,29 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-  id("org.springframework.boot") version "2.3.2.RELEASE"
+  id("org.springframework.boot") version "2.3.1.RELEASE"
   id("io.spring.dependency-management") version "1.0.9.RELEASE"
+  id("com.palantir.graal") version "0.7.1"
   kotlin("jvm") version "1.3.72"
   kotlin("plugin.spring") version "1.3.72"
 }
 
 group = "com.andreramon"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_11
+java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
   mavenCentral()
+  maven(url = "https://repo.spring.io/milestone")
+  maven(url = "https://repo.spring.io/snapshot")
+}
+
+graal {
+  javaVersion("8")
+  graalVersion("20.1.0")
+  option("--no-fallback")
+  mainClass("com.andreramon.demo.DemoApplication")
+  outputName("native-app")
 }
 
 dependencies {
@@ -20,6 +31,7 @@ dependencies {
   // Spring Boot
   implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
+  implementation("org.springframework.experimental:spring-graalvm-native:0.7.1")
 
   // Kotlin
   implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -53,6 +65,6 @@ tasks.withType<Test> {
 tasks.withType<KotlinCompile> {
   kotlinOptions {
     freeCompilerArgs = listOf("-Xjsr305=strict")
-    jvmTarget = "11"
+    jvmTarget = "1.8"
   }
 }
