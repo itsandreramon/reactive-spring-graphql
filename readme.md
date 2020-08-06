@@ -37,10 +37,10 @@ subscription {
 #### Default Routes
 Your newly created GraphQL server starts up with following preconfigured default routes:
 
-/graphql - GraphQL server endpoint used for processing queries and mutations
-/subscriptions - GraphQL server endpoint used for processing subscriptions
-/sdl - Convenience endpoint that returns current schema in Schema Definition Language format
-/playground - Prisma Labs GraphQL Playground IDE endpoint
+- /graphql - GraphQL server endpoint used for processing queries and mutations
+- /subscriptions - GraphQL server endpoint used for processing subscriptions
+- /sdl - Convenience endpoint that returns current schema in Schema Definition Language format
+- /playground - Prisma Labs GraphQL Playground IDE endpoint
 
 ### Technologies used
 - [Gradle](https://github.com/gradle/gradle)
