@@ -23,6 +23,10 @@ $ docker-compose ps
 ```
 $ docker exec -it database psql -U postgres
 ```
+6. After updating your Spring application, delete your old image and iterate
+```
+$ docker image rm demo/spring-graphql
+```
 
 ### Example GraphQL query
 ```
