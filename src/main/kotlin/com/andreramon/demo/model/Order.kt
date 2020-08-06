@@ -4,14 +4,14 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Column
 import org.springframework.data.relational.core.mapping.Table
 
-@Table("books")
-data class Book(
+@Table("orders")
+data class Order(
   @Id
   val id: Int,
 
-  @Column("name")
-  val name: String?,
+  @Column("customerid")
+  val customerId: Int?,
 
-  @Column("authorid")
-  val authorId: Int?
+  @Column("bookid")
+  val bookId: Int?
 )

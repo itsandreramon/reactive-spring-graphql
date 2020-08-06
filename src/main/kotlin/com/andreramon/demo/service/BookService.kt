@@ -15,6 +15,10 @@ class BookService(
     return bookRepository.findById(id)
   }
 
+  fun findBooksByAuthorId(id: Int): Flux<Book> {
+    return bookRepository.findBooksByAuthorId(id)
+  }
+
   fun findAllBooks(): Flux<Book> {
     return bookRepository.findAll()
   }
