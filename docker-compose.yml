@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: password
 
   spring:
-    image: "demo:0.0.1-SNAPSHOT"
+    image: "demo/spring-graphql"
     container_name: spring
     depends_on:
       - database
