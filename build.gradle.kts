@@ -22,7 +22,7 @@ graal {
   javaVersion("8")
   graalVersion("20.1.0")
   option("--no-fallback")
-  mainClass("com.andreramon.demo.DemoApplication")
+  mainClass("com.andreramon.demo.App")
   outputName("native-app")
 }
 
