@@ -4,10 +4,10 @@ An example project showcasing a simple service which serves data about famous bo
 ### How to run the sample
 1. Build a container image using Spring Boot's Buildpack support
 ```
-$ ./gradlew bootBuildImage --imageName=demo/spring-graphql
+$ ./gradlew bootBuildImage --imageName=itsandreramon/spring
 ```
 
-2. Make sure the corresponding demo/spring-graphql image has been built
+2. Make sure the corresponding itsandreramon/spring image has been built
 ```
 $ docker images -a
 ```
