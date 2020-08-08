@@ -24,6 +24,48 @@ $ docker-compose ps
 $ docker exec -it database psql -U postgres
 ```
 
+### GraphQL Kotlin generates a type-safe schema for you
+```
+schema {
+    query: Query
+}
+
+type Author {
+    id: Int!
+    name: String
+}
+
+type Book {
+    authorId: Int
+    id: Int!
+    name: String
+}
+
+type Customer {
+    id: Int!
+    name: String
+}
+
+type Order {
+    bookId: Int
+    customerId: Int
+    id: Int!
+}
+
+type Query {
+    allAuthors: [Author!]!
+    allBooks: [Book!]!
+    allCustomers: [Customer!]!
+    allOrders: [Order!]!
+    authorById(id: Int!): Author!
+    bookById(id: Int!): Book!
+    booksByAuthorId(id: Int!): [Book!]!
+    customerById(id: Int!): Customer!
+    orderByCustomerId(id: Int!): [Order!]!
+    orderById(id: Int!): Order!
+}
+```
+
 ### Example GraphQL query
 ```
 {
