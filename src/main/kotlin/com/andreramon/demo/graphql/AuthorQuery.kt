@@ -2,26 +2,29 @@ package com.andreramon.demo.graphql
 
 import com.andreramon.demo.model.Author
 import com.andreramon.demo.model.Book
-import com.andreramon.demo.model.Customer
 import com.andreramon.demo.service.AuthorService
 import com.andreramon.demo.service.BookService
-import com.andreramon.demo.service.CustomerService
 import com.expediagroup.graphql.annotations.GraphQLDescription
+import com.expediagroup.graphql.spring.operations.Query
 import com.expediagroup.graphql.spring.operations.Subscription
 import org.springframework.stereotype.Component
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import java.util.concurrent.CompletableFuture
 
 @Component
-class CustomerSubscription(
-  private val customerService: CustomerService
-) : Subscription {
+class AuthorQuery(
+  private val authorService: AuthorService
+) : Query {
 
-  fun customerById(id: Int): Mono<Customer> {
-    return customerService.findCustomerById(id)
+  fun authorById(id: Int): CompletableFuture<Author> {
+    return authorService.findAuthorById(id)
+      .toFuture()
   }
 
-  fun allCustomers(): Flux<Customer> {
-    return customerService.findAll()
+  fun allAuthors(): CompletableFuture<List<Author>> {
+    return authorService.findAll()
+      .collectList()
+      .toFuture()
   }
 }
