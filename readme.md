@@ -26,11 +26,12 @@ $ docker exec -it database psql -U postgres
 
 ### Example GraphQL query
 ```
-subscription {
-    allBooks {
-        name
-        pageCount
-    }
+{
+  allBooks {
+    id
+    name
+    authorId
+  }
 }
 ```
 
