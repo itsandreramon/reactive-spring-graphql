@@ -1,8 +1,6 @@
 package com.andreramon.demo.service
 
-import com.andreramon.demo.model.Book
 import com.andreramon.demo.model.Order
-import com.andreramon.demo.repository.BookRepository
 import com.andreramon.demo.repository.OrderRepository
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
