@@ -60,10 +60,13 @@ VALUES (1, 2);
 
 SELECT *
 FROM books;
+
 SELECT *
 FROM authors;
+
 SELECT *
 FROM customers;
+
 SELECT *
 FROM orders;
 
