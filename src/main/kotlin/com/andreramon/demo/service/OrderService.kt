@@ -8,18 +8,18 @@ import reactor.core.publisher.Mono
 
 @Service
 class OrderService(
-  private val orderRepository: OrderRepository
+    private val orderRepository: OrderRepository
 ) {
 
-  fun findOrderById(id: Int): Mono<Order> {
-    return orderRepository.findById(id)
-  }
+    fun findOrderById(id: Int): Mono<Order> {
+        return orderRepository.findById(id)
+    }
 
-  fun findOrderByCustomerId(id: Int): Flux<Order> {
-    return orderRepository.findOrderByCustomerId(id)
-  }
+    fun findOrderByCustomerId(id: Int): Flux<Order> {
+        return orderRepository.findOrderByCustomerId(id)
+    }
 
-  fun findAll(): Flux<Order> {
-    return orderRepository.findAll();
-  }
+    fun findAll(): Flux<Order> {
+        return orderRepository.findAll()
+    }
 }

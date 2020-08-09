@@ -6,9 +6,9 @@ import org.springframework.data.relational.core.mapping.Table
 
 @Table("customers")
 data class Customer(
-  @Id
-  val id: Int,
+    @Id
+    val id: Int,
 
-  @Column("name")
-  val name: String?
+    @Column("name")
+    val name: String?
 )

@@ -8,14 +8,14 @@ import reactor.core.publisher.Mono
 
 @Service
 class CustomerService(
-  private val customerRepository: CustomerRepository
+    private val customerRepository: CustomerRepository
 ) {
 
-  fun findCustomerById(id: Int): Mono<Customer> {
-    return customerRepository.findById(id)
-  }
+    fun findCustomerById(id: Int): Mono<Customer> {
+        return customerRepository.findById(id)
+    }
 
-  fun findAll(): Flux<Customer> {
-    return customerRepository.findAll()
-  }
+    fun findAll(): Flux<Customer> {
+        return customerRepository.findAll()
+    }
 }

@@ -8,14 +8,14 @@ import reactor.core.publisher.Mono
 
 @Service
 class AuthorService(
-  private val authorRepository: AuthorRepository
+    private val authorRepository: AuthorRepository
 ) {
 
-  fun findAuthorById(id: Int): Mono<Author> {
-    return authorRepository.findById(id)
-  }
+    fun findAuthorById(id: Int): Mono<Author> {
+        return authorRepository.findById(id)
+    }
 
-  fun findAll(): Flux<Author> {
-    return authorRepository.findAll()
-  }
+    fun findAll(): Flux<Author> {
+        return authorRepository.findAll()
+    }
 }

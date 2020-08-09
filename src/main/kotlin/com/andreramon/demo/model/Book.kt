@@ -6,12 +6,12 @@ import org.springframework.data.relational.core.mapping.Table
 
 @Table("books")
 data class Book(
-  @Id
-  val id: Int,
+    @Id
+    val id: Int,
 
-  @Column("name")
-  val name: String?,
+    @Column("name")
+    val name: String?,
 
-  @Column("authorid")
-  val authorId: Int?
+    @Column("authorid")
+    val authorId: Int?
 )

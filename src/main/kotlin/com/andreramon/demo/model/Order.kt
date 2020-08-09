@@ -6,12 +6,12 @@ import org.springframework.data.relational.core.mapping.Table
 
 @Table("orders")
 data class Order(
-  @Id
-  val id: Int,
+    @Id
+    val id: Int,
 
-  @Column("customerid")
-  val customerId: Int?,
+    @Column("customerid")
+    val customerId: Int?,
 
-  @Column("bookid")
-  val bookId: Int?
+    @Column("bookid")
+    val bookId: Int?
 )

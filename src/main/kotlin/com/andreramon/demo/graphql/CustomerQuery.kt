@@ -8,17 +8,17 @@ import java.util.concurrent.CompletableFuture
 
 @Component
 class CustomerQuery(
-  private val customerService: CustomerService
+    private val customerService: CustomerService
 ) : Query {
 
-  fun customerById(id: Int): CompletableFuture<Customer> {
-    return customerService.findCustomerById(id)
-      .toFuture()
-  }
+    fun customerById(id: Int): CompletableFuture<Customer> {
+        return customerService.findCustomerById(id)
+            .toFuture()
+    }
 
-  fun allCustomers(): CompletableFuture<List<Customer>> {
-    return customerService.findAll()
-      .collectList()
-      .toFuture()
-  }
+    fun allCustomers(): CompletableFuture<List<Customer>> {
+        return customerService.findAll()
+            .collectList()
+            .toFuture()
+    }
 }

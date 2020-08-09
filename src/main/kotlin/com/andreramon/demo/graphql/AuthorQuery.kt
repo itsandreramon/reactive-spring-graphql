@@ -8,17 +8,17 @@ import java.util.concurrent.CompletableFuture
 
 @Component
 class AuthorQuery(
-  private val authorService: AuthorService
+    private val authorService: AuthorService
 ) : Query {
 
-  fun authorById(id: Int): CompletableFuture<Author> {
-    return authorService.findAuthorById(id)
-      .toFuture()
-  }
+    fun authorById(id: Int): CompletableFuture<Author> {
+        return authorService.findAuthorById(id)
+            .toFuture()
+    }
 
-  fun allAuthors(): CompletableFuture<List<Author>> {
-    return authorService.findAll()
-      .collectList()
-      .toFuture()
-  }
+    fun allAuthors(): CompletableFuture<List<Author>> {
+        return authorService.findAll()
+            .collectList()
+            .toFuture()
+    }
 }

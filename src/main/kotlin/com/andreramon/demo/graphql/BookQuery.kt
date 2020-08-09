@@ -8,23 +8,23 @@ import java.util.concurrent.CompletableFuture
 
 @Component
 class BookQuery(
-  private val bookService: BookService
+    private val bookService: BookService
 ) : Query {
 
-  fun bookById(id: Int): CompletableFuture<Book> {
-    return bookService.findBookById(id)
-      .toFuture()
-  }
+    fun bookById(id: Int): CompletableFuture<Book> {
+        return bookService.findBookById(id)
+            .toFuture()
+    }
 
-  fun booksByAuthorId(id: Int): CompletableFuture<List<Book>> {
-    return bookService.findBooksByAuthorId(id)
-      .collectList()
-      .toFuture()
-  }
+    fun booksByAuthorId(id: Int): CompletableFuture<List<Book>> {
+        return bookService.findBooksByAuthorId(id)
+            .collectList()
+            .toFuture()
+    }
 
-  fun allBooks(): CompletableFuture<List<Book>> {
-    return bookService.findAllBooks()
-      .collectList()
-      .toFuture()
-  }
+    fun allBooks(): CompletableFuture<List<Book>> {
+        return bookService.findAllBooks()
+            .collectList()
+            .toFuture()
+    }
 }

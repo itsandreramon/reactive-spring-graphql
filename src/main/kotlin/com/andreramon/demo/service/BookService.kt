@@ -8,18 +8,18 @@ import reactor.core.publisher.Mono
 
 @Service
 class BookService(
-  private val bookRepository: BookRepository
+    private val bookRepository: BookRepository
 ) {
 
-  fun findBookById(id: Int): Mono<Book> {
-    return bookRepository.findById(id)
-  }
+    fun findBookById(id: Int): Mono<Book> {
+        return bookRepository.findById(id)
+    }
 
-  fun findBooksByAuthorId(id: Int): Flux<Book> {
-    return bookRepository.findBooksByAuthorId(id)
-  }
+    fun findBooksByAuthorId(id: Int): Flux<Book> {
+        return bookRepository.findBooksByAuthorId(id)
+    }
 
-  fun findAllBooks(): Flux<Book> {
-    return bookRepository.findAll()
-  }
+    fun findAllBooks(): Flux<Book> {
+        return bookRepository.findAll()
+    }
 }
