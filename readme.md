@@ -26,7 +26,7 @@ $ docker-compose ps
 $ docker exec -it database psql -U postgres
 ```
 
-### GraphQL Kotlin generates a type-safe schema for you
+### Define your GraphQL queries
 ```kotlin
 @Component
 class AuthorQuery(
@@ -42,6 +42,7 @@ class AuthorQuery(
 data class Author(val id: Int, val name: String?)
 ```
 
+### Let GraphQL Kotlin generate a type-safe schema for you
 ```graphql
 schema {
     query: Query
@@ -57,7 +58,7 @@ type Query {
 }
 ```
 
-### Example GraphQL query
+### Send a query to your GraphQL endpoint
 ```graphql
 {
   authorById(id: 1) {
