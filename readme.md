@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/itsandreramon/reactive-spring-graphql/branch/main/graph/badge.svg)](https://codecov.io/gh/itsandreramon/reactive-spring-graphql)
+
 # Reactive Spring GraphQL
 An example project showcasing a simple service which serves data about famous books.
 
