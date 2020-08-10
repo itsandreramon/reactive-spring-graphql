@@ -10,6 +10,7 @@ plugins {
     id("io.spring.dependency-management") version "1.0.9.RELEASE"
     id("io.gitlab.arturbosch.detekt") version "1.10.0"
     id("com.palantir.graal") version "0.7.1"
+    jacoco
 }
 
 group = "com.andreramon"
@@ -45,6 +46,10 @@ detekt {
     failFast = false
     parallel = true
     debug = true
+}
+
+jacoco {
+    toolVersion = "0.8.5"
 }
 
 dependencies {
@@ -93,5 +98,17 @@ tasks {
 
     withType<Test> {
         useJUnitPlatform()
+    }
+
+    test {
+        finalizedBy(jacocoTestReport) // report is always generated after tests run
+    }
+
+    jacocoTestReport {
+        dependsOn(test) // tests are required to run before generating the report
+        reports {
+            xml.isEnabled = true
+            csv.isEnabled = false
+        }
     }
 }
