@@ -5,6 +5,9 @@ An example project showcasing a simple service which serves data about famous bo
 
 ### Define your GraphQL queries
 ```kotlin
+import com.expediagroup.graphql.spring.operations.Query
+import org.springframework.stereotype.Component
+
 @Component
 class AuthorQuery(
     private val authorService: AuthorService
