@@ -45,7 +45,7 @@ type Query {
 ```
 
 ### How to run the sample
-1. Build a container image using Spring Boot's Buildpack support
+1. Build a Docker image using Spring Boot's Buildpack support
 ```
 $ ./gradlew bootBuildImage --imageName=itsandreramon/spring
 ```
