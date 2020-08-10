@@ -3,29 +3,6 @@
 # Reactive Spring GraphQL
 An example project showcasing a simple service which serves data about famous books.
 
-### How to run the sample
-1. Build a container image using Spring Boot's Buildpack support
-```
-$ ./gradlew bootBuildImage --imageName=itsandreramon/spring
-```
-
-2. Make sure the corresponding itsandreramon/spring image has been built
-```
-$ docker images -a
-```
-3. Run Docker Compose
-```
-$ docker-compose up
-```
-4. Make sure everything is running correctly
-```
-$ docker-compose ps
-```
-5. Access PostgreSQL to make changes according to your needs (e.g. via CLI)
-```
-$ docker exec -it database psql -U postgres
-```
-
 ### Define your GraphQL queries
 ```kotlin
 @Component
@@ -65,6 +42,29 @@ type Query {
     name
   }
 }
+```
+
+### How to run the sample
+1. Build a container image using Spring Boot's Buildpack support
+```
+$ ./gradlew bootBuildImage --imageName=itsandreramon/spring
+```
+
+2. Make sure the corresponding itsandreramon/spring image has been built
+```
+$ docker images -a
+```
+3. Run Docker Compose
+```
+$ docker-compose up
+```
+4. Make sure everything is running correctly
+```
+$ docker-compose ps
+```
+5. Access PostgreSQL to make changes according to your needs (e.g. via CLI)
+```
+$ docker exec -it database psql -U postgres
 ```
 
 ### Default Routes
