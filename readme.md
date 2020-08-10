@@ -67,7 +67,7 @@ $ docker-compose ps
 $ docker exec -it database psql -U postgres
 ```
 
-### Default Routes
+### Default routes
 Your newly created GraphQL server starts up with following preconfigured default routes:
 
 - /graphql - GraphQL server endpoint used for processing queries and mutations
