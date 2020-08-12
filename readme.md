@@ -81,7 +81,12 @@ Your newly created GraphQL server starts up with following preconfigured default
 ### Technologies used
 - [Gradle](https://github.com/gradle/gradle)
 - [Kotlin](https://github.com/JetBrains/kotlin)
-- [GraphQL Kotlin by Expedia](https://github.com/ExpediaGroup/graphql-kotlin)
+
+- [MockK](https://github.com/mockk/mockk)
+- [Kotest](https://github.com/kotest/kotest)
+
+- [GraphQL](https://github.com/ExpediaGroup/graphql-kotlin)
 - [Spring WebFlux](https://spring.io/reactive)
 - [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc)
+
 - [PostgreSQL](https://www.postgresql.org/)
