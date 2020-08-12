@@ -24,8 +24,8 @@ class AuthorServiceTest {
     @Test
     fun testFindAuthorById() {
         StepVerifier.create(authorService.findAuthorById(1))
-                .expectNextMatches { it == Author(1, "Leo Tolstoy") }
-                .expectComplete()
-                .verify()
+            .expectNextMatches { it == Author(1, "Leo Tolstoy") }
+            .expectComplete()
+            .verify()
     }
 }
